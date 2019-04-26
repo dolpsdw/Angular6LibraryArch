@@ -5,5 +5,5 @@ import { Injectable } from '@angular/core';
 })
 export class LibOneService {
 
-  constructor() { }
+  constructor() { console.log("libOneInstance") }
 }
