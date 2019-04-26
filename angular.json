@@ -165,6 +165,41 @@
           }
         }
       }
+    },
+    "libTwo": {
+      "root": "projects/lib-two",
+      "sourceRoot": "projects/lib-two/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lib-two/tsconfig.lib.json",
+            "project": "projects/lib-two/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-two/src/test.ts",
+            "tsConfig": "projects/lib-two/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-two/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lib-two/tsconfig.lib.json",
+              "projects/lib-two/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "appdemo"

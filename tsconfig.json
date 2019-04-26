@@ -24,6 +24,12 @@
       ],
       "lib-one/*": [
         "dist/lib-one/*"
+      ],
+      "lib-two": [
+        "dist/lib-two"
+      ],
+      "lib-two/*": [
+        "dist/lib-two/*"
       ]
     }
   }
