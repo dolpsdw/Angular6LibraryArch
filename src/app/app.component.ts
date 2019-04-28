@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
-import { LibOneService } from 'lib-one'
+import { LibOneService } from 'lib-one';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-constructor(private libOneService: LibOneService){ console.log("constructed")}
+constructor(private libOneService: LibOneService) {
+  console.log('AppComponent constructed');
+  libOneService.forwardHello('AppComponent');
+}
   title = 'appdemo';
 }
