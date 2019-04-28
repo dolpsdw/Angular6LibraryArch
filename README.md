@@ -92,3 +92,8 @@ Public services can be defined as desired and exposed through public-api.
 **Services notes:**  
 If you want to consume a service not from the component but from the template, ensure that you inject the service as public in the component.  
 **Al this "security" measures of Public Private, are meant for encapsulation at compile time, runtime JS should be considered as exposed.
+
+**Service DI scope Searching:**  
+If you ask in constructor for a concrete service (even from one library to another library),  
+It first ask his "reference" module to resolve the DI, if the module is not provided(by imports, providedIn | providers[])  
+It start request DI Service instances to the parents, and if used providedIn decorator it will prefer Parents Instances.

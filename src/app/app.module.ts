@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LibOneModule } from 'lib-one';
+import { LibTwoModule } from 'lib-two';
 @NgModule({
   declarations: [
     AppComponent
@@ -11,7 +12,8 @@ import { LibOneModule } from 'lib-one';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LibOneModule
+    LibOneModule,
+    LibTwoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

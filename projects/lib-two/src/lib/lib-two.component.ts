@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LibOneService} from 'lib-one';
 
 @Component({
   selector: 'lib-libTwo',
@@ -11,7 +12,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LibTwoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private libOneService: LibOneService ) {
+    libOneService.forwardHello('LibTwo');
+  }
 
   ngOnInit() {
   }
